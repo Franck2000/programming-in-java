@@ -1,5 +1,8 @@
 package agh.ii.prinjava.lab02.lst02_06;
 
+import agh.ii.prinjava.lab02.lst02_07.I1;
+import agh.ii.prinjava.lab02.lst02_07.I2;
+
 /**
  * An <i>abstract class</i> is a class that is:
  * <ul>
@@ -51,6 +54,23 @@ abstract class ToBeConsideredAbstract {
 
     void m1() {
         System.out.println("ToBeConsideredAbstract.m1()");
+    }
+
+    /**
+     * A class can implement more than one interface
+     */
+    static class C2 implements I1, I2 {
+        @Override
+        public void m1() {
+        }
+
+        @Override
+        public void m21() {
+        }
+
+        @Override
+        public void m22() {
+        }
     }
 }
 

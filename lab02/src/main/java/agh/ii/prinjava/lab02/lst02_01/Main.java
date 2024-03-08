@@ -1,5 +1,7 @@
 package agh.ii.prinjava.lab02.lst02_01;
 
+import javax.swing.*;
+
 /**
  * The word "final" is a Java keyword for declaring a constant
  * <ul>
@@ -27,6 +29,7 @@ class HelloFinalVariables {
         // fv2++; // as above
     }
 }
+
 
 public class Main {
     public static void main(String[] args) {
