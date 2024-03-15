@@ -10,28 +10,46 @@ import agh.ii.prinjava.lab02.exc02_01.StackOfInts;
  */
 public class ArrayBasedImpl implements StackOfInts {
 
+    private static final int DEFAULT_CAPACITY = 10;
+    private int[] elements;
+    private int size;
+
+    public ArrayBasedImpl() {
+        elements = new int[DEFAULT_CAPACITY];
+        size = 0;
+    }
+
     /**
      * Removes and returns the element at the top of the stack.
      *
      * @return The element at the top of the stack
-     * @throws IllegalStateException if the operation is not supported
+     * @throws IllegalStateException if the stack is empty
      * @see StackOfInts#pop()
      */
     @Override
     public int pop() {
-        throw new IllegalStateException("To be implemented");
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        int topElem = elements[size - 1];
+        size--;
+        return topElem;
     }
 
     /**
      * Adds an element to the top of the stack.
      *
      * @param x The element to be pushed onto the stack
-     * @throws IllegalStateException if the operation is not supported
+     * @throws IllegalStateException if the stack is full
      * @see StackOfInts#push(int)
      */
     @Override
     public void push(int x) {
-        throw new IllegalStateException("To be implemented");
+        if (size == elements.length) {
+            throw new IllegalStateException("Stack is full");
+        }
+        elements[size] = x;
+        size++;
     }
 
     /**
@@ -42,24 +60,31 @@ public class ArrayBasedImpl implements StackOfInts {
      */
     @Override
     public int numOfElems() {
-        return numOfElems;
+        return size;
     }
 
     /**
      * Returns the element at the top of the stack without removing it.
      *
      * @return The element at the top of the stack
-     * @throws IllegalStateException if the operation is not supported
+     * @throws IllegalStateException if the stack is empty
      * @see StackOfInts#peek()
      */
     @Override
     public int peek() {
-        throw new IllegalStateException("To be implemented");
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return elements[size - 1];
     }
 
     /**
-     * The current number of elements in the stack.
+     * Checks if the stack is empty.
+     *
+     * @return {@code true} if the stack is empty, {@code false} otherwise
      */
-    private int numOfElems = 0;
+    public boolean isEmpty() {
+        return size == 0;
+    }
 }
 

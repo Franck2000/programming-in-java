@@ -1,0 +1,6 @@
+Number of executions : 1   Time of execution : 0.0150452 secondes 
+Number of executions : 2   Time of execution : 0.014931 secondes 
+Number of executions : 3   Time of execution : 0.0147877 secondes 
+Number of executions : 4   Time of execution : 0.0140328 secondes 
+Number of executions : 5   Time of execution : 0.015289 secondes 
+Number of executions : 6   Time of execution : 0.0147785 secondes 
