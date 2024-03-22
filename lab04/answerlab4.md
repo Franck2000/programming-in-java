@@ -164,3 +164,5 @@ GenBox<?> gb12 = new GenBox<A>(); // Valid, unknown type, but compatible with an
 Object b4 = gb10.getX(); // Valid, returns Object type since the generic type T is unknown
 gb10.setX(new B()); // Error: Cannot assign to an unbounded wildcard generic
 ```
+
+# Git : https://github.com/Franck2000/programming-in-java
